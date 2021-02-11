@@ -2,14 +2,25 @@ grammar cgrammar;
 
 program: MAIN OPENPAREN CLOSEPAREN block EOF;
 
-block: OPENBRACK varDecl* statement* CLOSEBRACK;
+block
+    : OPENBRACK varDecl statement CLOSEBRACK
+        {from cparse import addVariable}
+        {printVariables()}
+    | OPENBRACK varDecl CLOSEBRACK
+        {from cparse import addVariable}
+        {printVariables()}
+    | OPENBRACK statement CLOSEBRACK
+    | OPENBRACK CLOSEBRACK
+    ;
 
 varDecl
     : 'int' identifier ';'
         {from cparse import addVariable}
         {addVariable($identifier.value)}
-;
-
+    | 'int' identifier ';' varDecl
+        {from cparse import addVariable}
+        {addVariable($identifier.value)}
+    ;
 statement:
     identifier '=' expr ';'
     | 'if' OPENPAREN expr CLOSEPAREN statement 'else' statement
