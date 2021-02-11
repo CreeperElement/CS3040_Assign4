@@ -1,0 +1,26 @@
+Program           : 'main' '(' ')' Block
+
+Block             : '{' VarDecl* Statement* '}'
+
+VarDecl           : int Identifier ';'
+
+Statement         : Identifier '=' Expr ';'
+                  | if ( Expr ) Statement (else Statement)?
+                  | while ( Expr ) Statement
+                  | Block
+                  | ';'
+                
+Expr              : Term ('+' Expr)
+                  | Term
+Term              : Factor ('*' Term)
+                  | Factor
+Factor            : Identifier | Literal | '(' Expr ')'
+
+Literal           : Digit Digit*
+
+Identifier        : Alpha AlphaNum*
+
+Alpha             : a | b | c | â€¦ | z | A | B | C | â€¦ | Z
+AplhaNum          : Alpha | Digit | '_'
+
+Digit             : 0 | 1 | â€¦ | 9
