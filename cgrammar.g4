@@ -4,10 +4,10 @@ program: MAIN OPENPAREN CLOSEPAREN block EOF;
 
 block
     : OPENBRACK varDecl statement CLOSEBRACK
-        {from cparse import addVariable}
+        {from cparse import printVariables}
         {printVariables()}
     | OPENBRACK varDecl CLOSEBRACK
-        {from cparse import addVariable}
+        {from cparse import printVariables}
         {printVariables()}
     | OPENBRACK statement CLOSEBRACK
     | OPENBRACK CLOSEBRACK

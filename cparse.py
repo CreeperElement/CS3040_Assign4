@@ -21,10 +21,8 @@ def main():
     stream = antlr4.CommonTokenStream(lexer)
     parser = cgrammarParser(stream)
     parser._errHandler = BailErrorStrategy()
-    print("All vars" + str(variables))
     try:
         tree = parser.program()
-        printVariables()
     except ParseCancellationException as err:
         print("Syntax error in input, discovered by line " + str(lexer.line))
 
@@ -33,9 +31,10 @@ def addVariable(name):
     print(variables)
 
 def printVariables():
-    print("All declared variables:")
+    output = "All declared variables: "
     for variable in variables:
-        print('\t' + variable)
+        output += variable + ", "
+    print(output[:-2])
 
 if __name__ == '__main__':
     variables = []
