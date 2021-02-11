@@ -3,13 +3,13 @@ grammar cgrammar;
 program: MAIN OPENPAREN CLOSEPAREN block EOF;
 
 block
-    : OPENBRACK varDecl statement CLOSEBRACK
+    : OPENBRACK varDecl multiStatement CLOSEBRACK
         {from cparse import printVariables}
         {printVariables()}
     | OPENBRACK varDecl CLOSEBRACK
         {from cparse import printVariables}
         {printVariables()}
-    | OPENBRACK statement CLOSEBRACK
+    | OPENBRACK multiStatement CLOSEBRACK
     | OPENBRACK CLOSEBRACK
     ;
 
@@ -21,6 +21,12 @@ varDecl
         {from cparse import addVariable}
         {addVariable($identifier.value)}
     ;
+
+multiStatement
+    : statement multiStatement
+    | statement
+    ;
+
 statement:
     identifier '=' expr ';'
     | 'if' OPENPAREN expr CLOSEPAREN statement 'else' statement

@@ -35,6 +35,15 @@ class cgrammarListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by cgrammarParser#multiStatement.
+    def enterMultiStatement(self, ctx:cgrammarParser.MultiStatementContext):
+        pass
+
+    # Exit a parse tree produced by cgrammarParser#multiStatement.
+    def exitMultiStatement(self, ctx:cgrammarParser.MultiStatementContext):
+        pass
+
+
     # Enter a parse tree produced by cgrammarParser#statement.
     def enterStatement(self, ctx:cgrammarParser.StatementContext):
         pass
