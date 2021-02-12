@@ -1,14 +1,14 @@
 grammar cgrammar;
 
-program: MAIN OPENPAREN CLOSEPAREN block EOF;
+program
+    : MAIN OPENPAREN CLOSEPAREN block EOF
+        {from cparse import printVariables}
+        {printVariables()}
+    ;
 
 block
     : OPENBRACK varDecl multiStatement CLOSEBRACK
-        {from cparse import printVariables}
-        {printVariables()}
     | OPENBRACK varDecl CLOSEBRACK
-        {from cparse import printVariables}
-        {printVariables()}
     | OPENBRACK multiStatement CLOSEBRACK
     | OPENBRACK CLOSEBRACK
     ;
@@ -30,8 +30,14 @@ multiStatement
 statement:
     identifier '=' expr ';'
     | 'if' OPENPAREN expr CLOSEPAREN statement 'else' statement
+        {from cparse import addIf}
+        {addIf()}
     | 'if' OPENPAREN expr CLOSEPAREN statement
+        {from cparse import addIf}
+        {addIf()}
     | 'while' OPENPAREN expr CLOSEPAREN statement
+        {from cparse import addWhile}
+        {addWhile()}
     | block
     | ';'
     ;

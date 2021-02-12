@@ -8,6 +8,8 @@ from cgrammarParser import cgrammarParser
 import sys
 
 variables = []
+ifCounter = 0
+whileCounter = 0
 
 def main():
     input_stream = None
@@ -28,13 +30,24 @@ def main():
 
 def addVariable(name):
     variables.append(name)
-    print(variables)
+
+def addIf():
+    global ifCounter
+    ifCounter = ifCounter + 1
+
+def addWhile():
+    global whileCounter
+    whileCounter = whileCounter + 1
 
 def printVariables():
     output = "All declared variables: "
     for variable in variables:
         output += variable + ", "
     print(output[:-2])
+    global ifCounter
+    print("Number of if statements: " + str(ifCounter))
+    global whileCounter
+    print("Number of while statements: " + str(whileCounter))
 
 if __name__ == '__main__':
     variables = []

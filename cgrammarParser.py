@@ -6,59 +6,61 @@ from io import StringIO
 def serializedATN():
     with StringIO() as buf:
         buf.write("\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\22")
-        buf.write("\u009c\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
+        buf.write("\u00a0\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
         buf.write("\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\3\2")
-        buf.write("\3\2\3\2\3\2\3\2\3\2\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3")
-        buf.write("\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\5\3\64\n\3")
-        buf.write("\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\5")
-        buf.write("\4C\n\4\3\5\3\5\3\5\3\5\5\5I\n\5\3\6\3\6\3\6\3\6\3\6\3")
-        buf.write("\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6")
-        buf.write("\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\5\6f\n\6\3\7\3\7\3\7")
-        buf.write("\3\7\3\7\5\7m\n\7\3\b\3\b\3\b\3\b\3\b\5\bt\n\b\3\t\3\t")
-        buf.write("\3\t\3\t\3\t\3\t\5\t|\n\t\3\n\3\n\7\n\u0080\n\n\f\n\16")
-        buf.write("\n\u0083\13\n\3\13\3\13\3\13\3\13\3\13\3\13\5\13\u008b")
-        buf.write("\n\13\3\f\3\f\3\f\3\f\3\f\3\f\3\f\5\f\u0094\n\f\3\r\3")
-        buf.write("\r\3\r\3\r\5\r\u009a\n\r\3\r\2\2\16\2\4\6\b\n\f\16\20")
-        buf.write("\22\24\26\30\2\2\u00a1\2\32\3\2\2\2\4\63\3\2\2\2\6B\3")
-        buf.write("\2\2\2\bH\3\2\2\2\ne\3\2\2\2\fl\3\2\2\2\16s\3\2\2\2\20")
-        buf.write("{\3\2\2\2\22}\3\2\2\2\24\u008a\3\2\2\2\26\u0093\3\2\2")
-        buf.write("\2\30\u0099\3\2\2\2\32\33\7\21\2\2\33\34\7\17\2\2\34\35")
-        buf.write("\7\20\2\2\35\36\5\4\3\2\36\37\7\2\2\3\37\3\3\2\2\2 !\7")
-        buf.write("\r\2\2!\"\5\6\4\2\"#\5\b\5\2#$\7\16\2\2$%\b\3\1\2%&\b")
-        buf.write("\3\1\2&\64\3\2\2\2\'(\7\r\2\2()\5\6\4\2)*\7\16\2\2*+\b")
-        buf.write("\3\1\2+,\b\3\1\2,\64\3\2\2\2-.\7\r\2\2./\5\b\5\2/\60\7")
-        buf.write("\16\2\2\60\64\3\2\2\2\61\62\7\r\2\2\62\64\7\16\2\2\63")
-        buf.write(" \3\2\2\2\63\'\3\2\2\2\63-\3\2\2\2\63\61\3\2\2\2\64\5")
-        buf.write("\3\2\2\2\65\66\7\3\2\2\66\67\5\24\13\2\678\7\4\2\289\b")
-        buf.write("\4\1\29:\b\4\1\2:C\3\2\2\2;<\7\3\2\2<=\5\24\13\2=>\7\4")
-        buf.write("\2\2>?\5\6\4\2?@\b\4\1\2@A\b\4\1\2AC\3\2\2\2B\65\3\2\2")
-        buf.write("\2B;\3\2\2\2C\7\3\2\2\2DE\5\n\6\2EF\5\b\5\2FI\3\2\2\2")
-        buf.write("GI\5\n\6\2HD\3\2\2\2HG\3\2\2\2I\t\3\2\2\2JK\5\24\13\2")
-        buf.write("KL\7\5\2\2LM\5\f\7\2MN\7\4\2\2Nf\3\2\2\2OP\7\6\2\2PQ\7")
-        buf.write("\17\2\2QR\5\f\7\2RS\7\20\2\2ST\5\n\6\2TU\7\7\2\2UV\5\n")
-        buf.write("\6\2Vf\3\2\2\2WX\7\6\2\2XY\7\17\2\2YZ\5\f\7\2Z[\7\20\2")
-        buf.write("\2[\\\5\n\6\2\\f\3\2\2\2]^\7\b\2\2^_\7\17\2\2_`\5\f\7")
-        buf.write("\2`a\7\20\2\2ab\5\n\6\2bf\3\2\2\2cf\5\4\3\2df\7\4\2\2")
-        buf.write("eJ\3\2\2\2eO\3\2\2\2eW\3\2\2\2e]\3\2\2\2ec\3\2\2\2ed\3")
-        buf.write("\2\2\2f\13\3\2\2\2gh\5\16\b\2hi\7\t\2\2ij\5\f\7\2jm\3")
-        buf.write("\2\2\2km\5\16\b\2lg\3\2\2\2lk\3\2\2\2m\r\3\2\2\2no\5\20")
-        buf.write("\t\2op\7\n\2\2pq\5\16\b\2qt\3\2\2\2rt\5\20\t\2sn\3\2\2")
-        buf.write("\2sr\3\2\2\2t\17\3\2\2\2u|\5\24\13\2v|\5\22\n\2wx\7\17")
-        buf.write("\2\2xy\5\f\7\2yz\7\20\2\2z|\3\2\2\2{u\3\2\2\2{v\3\2\2")
-        buf.write("\2{w\3\2\2\2|\21\3\2\2\2}\u0081\7\f\2\2~\u0080\7\f\2\2")
-        buf.write("\177~\3\2\2\2\u0080\u0083\3\2\2\2\u0081\177\3\2\2\2\u0081")
-        buf.write("\u0082\3\2\2\2\u0082\23\3\2\2\2\u0083\u0081\3\2\2\2\u0084")
-        buf.write("\u0085\7\13\2\2\u0085\u0086\5\26\f\2\u0086\u0087\b\13")
-        buf.write("\1\2\u0087\u008b\3\2\2\2\u0088\u0089\7\13\2\2\u0089\u008b")
-        buf.write("\b\13\1\2\u008a\u0084\3\2\2\2\u008a\u0088\3\2\2\2\u008b")
-        buf.write("\25\3\2\2\2\u008c\u008d\5\30\r\2\u008d\u008e\5\26\f\2")
-        buf.write("\u008e\u008f\b\f\1\2\u008f\u0094\3\2\2\2\u0090\u0091\5")
-        buf.write("\30\r\2\u0091\u0092\b\f\1\2\u0092\u0094\3\2\2\2\u0093")
-        buf.write("\u008c\3\2\2\2\u0093\u0090\3\2\2\2\u0094\27\3\2\2\2\u0095")
-        buf.write("\u0096\7\13\2\2\u0096\u009a\b\r\1\2\u0097\u0098\7\f\2")
-        buf.write("\2\u0098\u009a\b\r\1\2\u0099\u0095\3\2\2\2\u0099\u0097")
-        buf.write("\3\2\2\2\u009a\31\3\2\2\2\r\63BHels{\u0081\u008a\u0093")
-        buf.write("\u0099")
+        buf.write("\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\3\3\3\3\3\3\3\3\3\3\3\3")
+        buf.write("\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\5\3\62\n\3\3\4\3\4")
+        buf.write("\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\5\4A\n\4")
+        buf.write("\3\5\3\5\3\5\3\5\5\5G\n\5\3\6\3\6\3\6\3\6\3\6\3\6\3\6")
+        buf.write("\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3")
+        buf.write("\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\5\6")
+        buf.write("j\n\6\3\7\3\7\3\7\3\7\3\7\5\7q\n\7\3\b\3\b\3\b\3\b\3\b")
+        buf.write("\5\bx\n\b\3\t\3\t\3\t\3\t\3\t\3\t\5\t\u0080\n\t\3\n\3")
+        buf.write("\n\7\n\u0084\n\n\f\n\16\n\u0087\13\n\3\13\3\13\3\13\3")
+        buf.write("\13\3\13\3\13\5\13\u008f\n\13\3\f\3\f\3\f\3\f\3\f\3\f")
+        buf.write("\3\f\5\f\u0098\n\f\3\r\3\r\3\r\3\r\5\r\u009e\n\r\3\r\2")
+        buf.write("\2\16\2\4\6\b\n\f\16\20\22\24\26\30\2\2\u00a5\2\32\3\2")
+        buf.write("\2\2\4\61\3\2\2\2\6@\3\2\2\2\bF\3\2\2\2\ni\3\2\2\2\fp")
+        buf.write("\3\2\2\2\16w\3\2\2\2\20\177\3\2\2\2\22\u0081\3\2\2\2\24")
+        buf.write("\u008e\3\2\2\2\26\u0097\3\2\2\2\30\u009d\3\2\2\2\32\33")
+        buf.write("\7\21\2\2\33\34\7\17\2\2\34\35\7\20\2\2\35\36\5\4\3\2")
+        buf.write("\36\37\7\2\2\3\37 \b\2\1\2 !\b\2\1\2!\3\3\2\2\2\"#\7\r")
+        buf.write("\2\2#$\5\6\4\2$%\5\b\5\2%&\7\16\2\2&\62\3\2\2\2\'(\7\r")
+        buf.write("\2\2()\5\6\4\2)*\7\16\2\2*\62\3\2\2\2+,\7\r\2\2,-\5\b")
+        buf.write("\5\2-.\7\16\2\2.\62\3\2\2\2/\60\7\r\2\2\60\62\7\16\2\2")
+        buf.write("\61\"\3\2\2\2\61\'\3\2\2\2\61+\3\2\2\2\61/\3\2\2\2\62")
+        buf.write("\5\3\2\2\2\63\64\7\3\2\2\64\65\5\24\13\2\65\66\7\4\2\2")
+        buf.write("\66\67\b\4\1\2\678\b\4\1\28A\3\2\2\29:\7\3\2\2:;\5\24")
+        buf.write("\13\2;<\7\4\2\2<=\5\6\4\2=>\b\4\1\2>?\b\4\1\2?A\3\2\2")
+        buf.write("\2@\63\3\2\2\2@9\3\2\2\2A\7\3\2\2\2BC\5\n\6\2CD\5\b\5")
+        buf.write("\2DG\3\2\2\2EG\5\n\6\2FB\3\2\2\2FE\3\2\2\2G\t\3\2\2\2")
+        buf.write("HI\5\24\13\2IJ\7\5\2\2JK\5\f\7\2KL\7\4\2\2Lj\3\2\2\2M")
+        buf.write("N\7\6\2\2NO\7\17\2\2OP\5\f\7\2PQ\7\20\2\2QR\5\n\6\2RS")
+        buf.write("\7\7\2\2ST\5\n\6\2TU\b\6\1\2UV\b\6\1\2Vj\3\2\2\2WX\7\6")
+        buf.write("\2\2XY\7\17\2\2YZ\5\f\7\2Z[\7\20\2\2[\\\5\n\6\2\\]\b\6")
+        buf.write("\1\2]^\b\6\1\2^j\3\2\2\2_`\7\b\2\2`a\7\17\2\2ab\5\f\7")
+        buf.write("\2bc\7\20\2\2cd\5\n\6\2de\b\6\1\2ef\b\6\1\2fj\3\2\2\2")
+        buf.write("gj\5\4\3\2hj\7\4\2\2iH\3\2\2\2iM\3\2\2\2iW\3\2\2\2i_\3")
+        buf.write("\2\2\2ig\3\2\2\2ih\3\2\2\2j\13\3\2\2\2kl\5\16\b\2lm\7")
+        buf.write("\t\2\2mn\5\f\7\2nq\3\2\2\2oq\5\16\b\2pk\3\2\2\2po\3\2")
+        buf.write("\2\2q\r\3\2\2\2rs\5\20\t\2st\7\n\2\2tu\5\16\b\2ux\3\2")
+        buf.write("\2\2vx\5\20\t\2wr\3\2\2\2wv\3\2\2\2x\17\3\2\2\2y\u0080")
+        buf.write("\5\24\13\2z\u0080\5\22\n\2{|\7\17\2\2|}\5\f\7\2}~\7\20")
+        buf.write("\2\2~\u0080\3\2\2\2\177y\3\2\2\2\177z\3\2\2\2\177{\3\2")
+        buf.write("\2\2\u0080\21\3\2\2\2\u0081\u0085\7\f\2\2\u0082\u0084")
+        buf.write("\7\f\2\2\u0083\u0082\3\2\2\2\u0084\u0087\3\2\2\2\u0085")
+        buf.write("\u0083\3\2\2\2\u0085\u0086\3\2\2\2\u0086\23\3\2\2\2\u0087")
+        buf.write("\u0085\3\2\2\2\u0088\u0089\7\13\2\2\u0089\u008a\5\26\f")
+        buf.write("\2\u008a\u008b\b\13\1\2\u008b\u008f\3\2\2\2\u008c\u008d")
+        buf.write("\7\13\2\2\u008d\u008f\b\13\1\2\u008e\u0088\3\2\2\2\u008e")
+        buf.write("\u008c\3\2\2\2\u008f\25\3\2\2\2\u0090\u0091\5\30\r\2\u0091")
+        buf.write("\u0092\5\26\f\2\u0092\u0093\b\f\1\2\u0093\u0098\3\2\2")
+        buf.write("\2\u0094\u0095\5\30\r\2\u0095\u0096\b\f\1\2\u0096\u0098")
+        buf.write("\3\2\2\2\u0097\u0090\3\2\2\2\u0097\u0094\3\2\2\2\u0098")
+        buf.write("\27\3\2\2\2\u0099\u009a\7\13\2\2\u009a\u009e\b\r\1\2\u009b")
+        buf.write("\u009c\7\f\2\2\u009c\u009e\b\r\1\2\u009d\u0099\3\2\2\2")
+        buf.write("\u009d\u009b\3\2\2\2\u009e\31\3\2\2\2\r\61@Fipw\177\u0085")
+        buf.write("\u008e\u0097\u009d")
         return buf.getvalue()
 
 
@@ -176,6 +178,8 @@ class cgrammarParser ( Parser ):
             self.block()
             self.state = 28
             self.match(cgrammarParser.EOF)
+            from cparse import printVariables
+            printVariables()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -223,21 +227,19 @@ class cgrammarParser ( Parser ):
         localctx = cgrammarParser.BlockContext(self, self._ctx, self.state)
         self.enterRule(localctx, 2, self.RULE_block)
         try:
-            self.state = 49
+            self.state = 47
             self._errHandler.sync(self);
             la_ = self._interp.adaptivePredict(self._input,0,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 30
-                self.match(cgrammarParser.OPENBRACK)
-                self.state = 31
-                self.varDecl()
                 self.state = 32
-                self.multiStatement()
+                self.match(cgrammarParser.OPENBRACK)
                 self.state = 33
+                self.varDecl()
+                self.state = 34
+                self.multiStatement()
+                self.state = 35
                 self.match(cgrammarParser.CLOSEBRACK)
-                from cparse import printVariables
-                printVariables()
                 pass
 
             elif la_ == 2:
@@ -248,25 +250,23 @@ class cgrammarParser ( Parser ):
                 self.varDecl()
                 self.state = 39
                 self.match(cgrammarParser.CLOSEBRACK)
-                from cparse import printVariables
-                printVariables()
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 43
+                self.state = 41
                 self.match(cgrammarParser.OPENBRACK)
-                self.state = 44
+                self.state = 42
                 self.multiStatement()
-                self.state = 45
+                self.state = 43
                 self.match(cgrammarParser.CLOSEBRACK)
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 47
+                self.state = 45
                 self.match(cgrammarParser.OPENBRACK)
-                self.state = 48
+                self.state = 46
                 self.match(cgrammarParser.CLOSEBRACK)
                 pass
 
@@ -313,16 +313,16 @@ class cgrammarParser ( Parser ):
         localctx = cgrammarParser.VarDeclContext(self, self._ctx, self.state)
         self.enterRule(localctx, 4, self.RULE_varDecl)
         try:
-            self.state = 64
+            self.state = 62
             self._errHandler.sync(self);
             la_ = self._interp.adaptivePredict(self._input,1,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 51
+                self.state = 49
                 self.match(cgrammarParser.T__0)
-                self.state = 52
+                self.state = 50
                 localctx._identifier = self.identifier()
-                self.state = 53
+                self.state = 51
                 self.match(cgrammarParser.T__1)
                 from cparse import addVariable
                 addVariable(localctx._identifier.value)
@@ -330,13 +330,13 @@ class cgrammarParser ( Parser ):
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 57
+                self.state = 55
                 self.match(cgrammarParser.T__0)
-                self.state = 58
+                self.state = 56
                 localctx._identifier = self.identifier()
-                self.state = 59
+                self.state = 57
                 self.match(cgrammarParser.T__1)
-                self.state = 60
+                self.state = 58
                 self.varDecl()
                 from cparse import addVariable
                 addVariable(localctx._identifier.value)
@@ -384,20 +384,20 @@ class cgrammarParser ( Parser ):
         localctx = cgrammarParser.MultiStatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 6, self.RULE_multiStatement)
         try:
-            self.state = 70
+            self.state = 68
             self._errHandler.sync(self);
             la_ = self._interp.adaptivePredict(self._input,2,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 66
+                self.state = 64
                 self.statement()
-                self.state = 67
+                self.state = 65
                 self.multiStatement()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 69
+                self.state = 67
                 self.statement()
                 pass
 
@@ -460,37 +460,39 @@ class cgrammarParser ( Parser ):
         localctx = cgrammarParser.StatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 8, self.RULE_statement)
         try:
-            self.state = 99
+            self.state = 103
             self._errHandler.sync(self);
             la_ = self._interp.adaptivePredict(self._input,3,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 72
+                self.state = 70
                 self.identifier()
-                self.state = 73
+                self.state = 71
                 self.match(cgrammarParser.T__2)
-                self.state = 74
+                self.state = 72
                 self.expr()
-                self.state = 75
+                self.state = 73
                 self.match(cgrammarParser.T__1)
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 77
+                self.state = 75
                 self.match(cgrammarParser.T__3)
-                self.state = 78
+                self.state = 76
                 self.match(cgrammarParser.OPENPAREN)
-                self.state = 79
+                self.state = 77
                 self.expr()
-                self.state = 80
+                self.state = 78
                 self.match(cgrammarParser.CLOSEPAREN)
+                self.state = 79
+                self.statement()
+                self.state = 80
+                self.match(cgrammarParser.T__4)
                 self.state = 81
                 self.statement()
-                self.state = 82
-                self.match(cgrammarParser.T__4)
-                self.state = 83
-                self.statement()
+                from cparse import addIf
+                addIf()
                 pass
 
             elif la_ == 3:
@@ -505,31 +507,35 @@ class cgrammarParser ( Parser ):
                 self.match(cgrammarParser.CLOSEPAREN)
                 self.state = 89
                 self.statement()
+                from cparse import addIf
+                addIf()
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 91
-                self.match(cgrammarParser.T__5)
-                self.state = 92
-                self.match(cgrammarParser.OPENPAREN)
                 self.state = 93
-                self.expr()
+                self.match(cgrammarParser.T__5)
                 self.state = 94
-                self.match(cgrammarParser.CLOSEPAREN)
+                self.match(cgrammarParser.OPENPAREN)
                 self.state = 95
+                self.expr()
+                self.state = 96
+                self.match(cgrammarParser.CLOSEPAREN)
+                self.state = 97
                 self.statement()
+                from cparse import addWhile
+                addWhile()
                 pass
 
             elif la_ == 5:
                 self.enterOuterAlt(localctx, 5)
-                self.state = 97
+                self.state = 101
                 self.block()
                 pass
 
             elif la_ == 6:
                 self.enterOuterAlt(localctx, 6)
-                self.state = 98
+                self.state = 102
                 self.match(cgrammarParser.T__1)
                 pass
 
@@ -575,22 +581,22 @@ class cgrammarParser ( Parser ):
         localctx = cgrammarParser.ExprContext(self, self._ctx, self.state)
         self.enterRule(localctx, 10, self.RULE_expr)
         try:
-            self.state = 106
+            self.state = 110
             self._errHandler.sync(self);
             la_ = self._interp.adaptivePredict(self._input,4,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 101
+                self.state = 105
                 self.term()
-                self.state = 102
+                self.state = 106
                 self.match(cgrammarParser.T__6)
-                self.state = 103
+                self.state = 107
                 self.expr()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 105
+                self.state = 109
                 self.term()
                 pass
 
@@ -636,22 +642,22 @@ class cgrammarParser ( Parser ):
         localctx = cgrammarParser.TermContext(self, self._ctx, self.state)
         self.enterRule(localctx, 12, self.RULE_term)
         try:
-            self.state = 113
+            self.state = 117
             self._errHandler.sync(self);
             la_ = self._interp.adaptivePredict(self._input,5,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 108
+                self.state = 112
                 self.factor()
-                self.state = 109
+                self.state = 113
                 self.match(cgrammarParser.T__7)
-                self.state = 110
+                self.state = 114
                 self.term()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 112
+                self.state = 116
                 self.factor()
                 pass
 
@@ -707,25 +713,25 @@ class cgrammarParser ( Parser ):
         localctx = cgrammarParser.FactorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 14, self.RULE_factor)
         try:
-            self.state = 121
+            self.state = 125
             token = self._input.LA(1)
             if token in [cgrammarParser.Alpha]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 115
+                self.state = 119
                 self.identifier()
 
             elif token in [cgrammarParser.Digit]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 116
+                self.state = 120
                 self.literal()
 
             elif token in [cgrammarParser.OPENPAREN]:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 117
+                self.state = 121
                 self.match(cgrammarParser.OPENPAREN)
-                self.state = 118
+                self.state = 122
                 self.expr()
-                self.state = 119
+                self.state = 123
                 self.match(cgrammarParser.CLOSEPAREN)
 
             else:
@@ -772,15 +778,15 @@ class cgrammarParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 123
-            self.match(cgrammarParser.Digit)
             self.state = 127
+            self.match(cgrammarParser.Digit)
+            self.state = 131
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==cgrammarParser.Digit:
-                self.state = 124
+                self.state = 128
                 self.match(cgrammarParser.Digit)
-                self.state = 129
+                self.state = 133
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -827,21 +833,21 @@ class cgrammarParser ( Parser ):
         localctx = cgrammarParser.IdentifierContext(self, self._ctx, self.state)
         self.enterRule(localctx, 18, self.RULE_identifier)
         try:
-            self.state = 136
+            self.state = 140
             self._errHandler.sync(self);
             la_ = self._interp.adaptivePredict(self._input,8,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 130
+                self.state = 134
                 localctx._Alpha = self.match(cgrammarParser.Alpha)
-                self.state = 131
+                self.state = 135
                 localctx._restOfIdentifier = self.restOfIdentifier()
                 localctx.value = (None if localctx._Alpha is None else localctx._Alpha.text) + localctx._restOfIdentifier.value
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 134
+                self.state = 138
                 localctx._Alpha = self.match(cgrammarParser.Alpha)
                 localctx.value = (None if localctx._Alpha is None else localctx._Alpha.text)
                 pass
@@ -891,21 +897,21 @@ class cgrammarParser ( Parser ):
         localctx = cgrammarParser.RestOfIdentifierContext(self, self._ctx, self.state)
         self.enterRule(localctx, 20, self.RULE_restOfIdentifier)
         try:
-            self.state = 145
+            self.state = 149
             self._errHandler.sync(self);
             la_ = self._interp.adaptivePredict(self._input,9,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 138
+                self.state = 142
                 localctx._alphaNum = self.alphaNum()
-                self.state = 139
+                self.state = 143
                 localctx._restOfIdentifier = self.restOfIdentifier()
                 localctx.value = localctx._alphaNum.value + localctx.value
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 142
+                self.state = 146
                 localctx._alphaNum = self.alphaNum()
                 localctx.value = localctx._alphaNum.value
                 pass
@@ -953,17 +959,17 @@ class cgrammarParser ( Parser ):
         localctx = cgrammarParser.AlphaNumContext(self, self._ctx, self.state)
         self.enterRule(localctx, 22, self.RULE_alphaNum)
         try:
-            self.state = 151
+            self.state = 155
             token = self._input.LA(1)
             if token in [cgrammarParser.Alpha]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 147
+                self.state = 151
                 localctx._Alpha = self.match(cgrammarParser.Alpha)
                 localctx.value = (None if localctx._Alpha is None else localctx._Alpha.text)
 
             elif token in [cgrammarParser.Digit]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 149
+                self.state = 153
                 localctx._Digit = self.match(cgrammarParser.Digit)
                 localctx.value = (None if localctx._Digit is None else localctx._Digit.text)
 
