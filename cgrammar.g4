@@ -16,10 +16,10 @@ block
 varDecl
     : 'int' identifier ';'
         {from cparse import addVariable}
-        {addVariable($identifier.value)}
+        {addVariable($identifier.text)}
     | 'int' identifier ';' varDecl
         {from cparse import addVariable}
-        {addVariable($identifier.value)}
+        {addVariable($identifier.text)}
     ;
 
 multiStatement
@@ -60,18 +60,14 @@ literal
     : Digit Digit*
     ;
 
-identifier returns [string value]
+identifier
     : Alpha restOfIdentifier
-        {$value = $Alpha.text + $restOfIdentifier.value}
     | Alpha
-        {$value = $Alpha.text}
     ;
 
-restOfIdentifier returns [string value]
+restOfIdentifier
     : alphaNum restOfIdentifier
-        {$value = $alphaNum.value + $restOfIdentifier.value}
     | alphaNum
-        {$value = $alphaNum.value}
     ;
 
 alphaNum returns [string value]
