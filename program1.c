@@ -5,7 +5,7 @@ main ( ) {
 
     while (x) {
         while (y) {
-
+            int z;
         }
         if (x) {
             x = 9;

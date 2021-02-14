@@ -29,6 +29,7 @@ def main():
         print("Syntax error in input, discovered by line " + str(lexer.line))
 
 def addVariable(name):
+    global variables
     variables.append(name)
 
 def addIf():

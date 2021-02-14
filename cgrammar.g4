@@ -79,11 +79,13 @@ alphaNum returns [string value]
         {$value = $Alpha.text}
     | Digit
         {$value = $Digit.text}
+    | '_'
+        {$value = '_'}
     ;
 
-Alpha: 'a' .. 'z' | 'A' .. 'Z';
+Alpha: [a-z] | [A-Z];
 
-Digit: '0' .. '9';
+Digit: [0-9];
 
 OPENBRACK: '{';
 CLOSEBRACK: '}';
