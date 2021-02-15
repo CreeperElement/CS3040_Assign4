@@ -1,11 +1,17 @@
-# Generated from cgrammar.g4 by ANTLR 4.5.3
+# Generated from cgrammar.g4 by ANTLR 4.9.1
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
+import sys
+if sys.version_info[1] > 5:
+	from typing import TextIO
+else:
+	from typing.io import TextIO
+
 
 def serializedATN():
     with StringIO() as buf:
-        buf.write("\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\23")
+        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\23")
         buf.write("\u009c\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
         buf.write("\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\3\2")
         buf.write("\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\3\3\3\3\3\3\3\3\3\3\3\3")
@@ -19,32 +25,32 @@ def serializedATN():
         buf.write("\n\7\n\u0084\n\n\f\n\16\n\u0087\13\n\3\13\3\13\3\13\5")
         buf.write("\13\u008c\n\13\3\f\3\f\3\f\3\f\5\f\u0092\n\f\3\r\3\r\3")
         buf.write("\r\3\r\3\r\3\r\5\r\u009a\n\r\3\r\2\2\16\2\4\6\b\n\f\16")
-        buf.write("\20\22\24\26\30\2\2\u00a2\2\32\3\2\2\2\4\61\3\2\2\2\6")
-        buf.write("@\3\2\2\2\bF\3\2\2\2\ni\3\2\2\2\fp\3\2\2\2\16w\3\2\2\2")
-        buf.write("\20\177\3\2\2\2\22\u0081\3\2\2\2\24\u008b\3\2\2\2\26\u0091")
-        buf.write("\3\2\2\2\30\u0099\3\2\2\2\32\33\7\22\2\2\33\34\7\20\2")
-        buf.write("\2\34\35\7\21\2\2\35\36\5\4\3\2\36\37\7\2\2\3\37 \b\2")
-        buf.write("\1\2 !\b\2\1\2!\3\3\2\2\2\"#\7\16\2\2#$\5\6\4\2$%\5\b")
-        buf.write("\5\2%&\7\17\2\2&\62\3\2\2\2\'(\7\16\2\2()\5\6\4\2)*\7")
-        buf.write("\17\2\2*\62\3\2\2\2+,\7\16\2\2,-\5\b\5\2-.\7\17\2\2.\62")
-        buf.write("\3\2\2\2/\60\7\16\2\2\60\62\7\17\2\2\61\"\3\2\2\2\61\'")
-        buf.write("\3\2\2\2\61+\3\2\2\2\61/\3\2\2\2\62\5\3\2\2\2\63\64\7")
-        buf.write("\3\2\2\64\65\5\24\13\2\65\66\7\4\2\2\66\67\b\4\1\2\67")
-        buf.write("8\b\4\1\28A\3\2\2\29:\7\3\2\2:;\5\24\13\2;<\7\4\2\2<=")
-        buf.write("\5\6\4\2=>\b\4\1\2>?\b\4\1\2?A\3\2\2\2@\63\3\2\2\2@9\3")
-        buf.write("\2\2\2A\7\3\2\2\2BC\5\n\6\2CD\5\b\5\2DG\3\2\2\2EG\5\n")
-        buf.write("\6\2FB\3\2\2\2FE\3\2\2\2G\t\3\2\2\2HI\5\24\13\2IJ\7\5")
-        buf.write("\2\2JK\5\f\7\2KL\7\4\2\2Lj\3\2\2\2MN\7\6\2\2NO\7\20\2")
-        buf.write("\2OP\5\f\7\2PQ\7\21\2\2QR\5\n\6\2RS\7\7\2\2ST\5\n\6\2")
-        buf.write("TU\b\6\1\2UV\b\6\1\2Vj\3\2\2\2WX\7\6\2\2XY\7\20\2\2YZ")
-        buf.write("\5\f\7\2Z[\7\21\2\2[\\\5\n\6\2\\]\b\6\1\2]^\b\6\1\2^j")
-        buf.write("\3\2\2\2_`\7\b\2\2`a\7\20\2\2ab\5\f\7\2bc\7\21\2\2cd\5")
-        buf.write("\n\6\2de\b\6\1\2ef\b\6\1\2fj\3\2\2\2gj\5\4\3\2hj\7\4\2")
-        buf.write("\2iH\3\2\2\2iM\3\2\2\2iW\3\2\2\2i_\3\2\2\2ig\3\2\2\2i")
-        buf.write("h\3\2\2\2j\13\3\2\2\2kl\5\16\b\2lm\7\t\2\2mn\5\f\7\2n")
-        buf.write("q\3\2\2\2oq\5\16\b\2pk\3\2\2\2po\3\2\2\2q\r\3\2\2\2rs")
-        buf.write("\5\20\t\2st\7\n\2\2tu\5\16\b\2ux\3\2\2\2vx\5\20\t\2wr")
-        buf.write("\3\2\2\2wv\3\2\2\2x\17\3\2\2\2y\u0080\5\24\13\2z\u0080")
+        buf.write("\20\22\24\26\30\2\2\2\u00a2\2\32\3\2\2\2\4\61\3\2\2\2")
+        buf.write("\6@\3\2\2\2\bF\3\2\2\2\ni\3\2\2\2\fp\3\2\2\2\16w\3\2\2")
+        buf.write("\2\20\177\3\2\2\2\22\u0081\3\2\2\2\24\u008b\3\2\2\2\26")
+        buf.write("\u0091\3\2\2\2\30\u0099\3\2\2\2\32\33\7\22\2\2\33\34\7")
+        buf.write("\20\2\2\34\35\7\21\2\2\35\36\5\4\3\2\36\37\7\2\2\3\37")
+        buf.write(" \b\2\1\2 !\b\2\1\2!\3\3\2\2\2\"#\7\16\2\2#$\5\6\4\2$")
+        buf.write("%\5\b\5\2%&\7\17\2\2&\62\3\2\2\2\'(\7\16\2\2()\5\6\4\2")
+        buf.write(")*\7\17\2\2*\62\3\2\2\2+,\7\16\2\2,-\5\b\5\2-.\7\17\2")
+        buf.write("\2.\62\3\2\2\2/\60\7\16\2\2\60\62\7\17\2\2\61\"\3\2\2")
+        buf.write("\2\61\'\3\2\2\2\61+\3\2\2\2\61/\3\2\2\2\62\5\3\2\2\2\63")
+        buf.write("\64\7\3\2\2\64\65\5\24\13\2\65\66\7\4\2\2\66\67\b\4\1")
+        buf.write("\2\678\b\4\1\28A\3\2\2\29:\7\3\2\2:;\5\24\13\2;<\7\4\2")
+        buf.write("\2<=\5\6\4\2=>\b\4\1\2>?\b\4\1\2?A\3\2\2\2@\63\3\2\2\2")
+        buf.write("@9\3\2\2\2A\7\3\2\2\2BC\5\n\6\2CD\5\b\5\2DG\3\2\2\2EG")
+        buf.write("\5\n\6\2FB\3\2\2\2FE\3\2\2\2G\t\3\2\2\2HI\5\24\13\2IJ")
+        buf.write("\7\5\2\2JK\5\f\7\2KL\7\4\2\2Lj\3\2\2\2MN\7\6\2\2NO\7\20")
+        buf.write("\2\2OP\5\f\7\2PQ\7\21\2\2QR\5\n\6\2RS\7\7\2\2ST\5\n\6")
+        buf.write("\2TU\b\6\1\2UV\b\6\1\2Vj\3\2\2\2WX\7\6\2\2XY\7\20\2\2")
+        buf.write("YZ\5\f\7\2Z[\7\21\2\2[\\\5\n\6\2\\]\b\6\1\2]^\b\6\1\2")
+        buf.write("^j\3\2\2\2_`\7\b\2\2`a\7\20\2\2ab\5\f\7\2bc\7\21\2\2c")
+        buf.write("d\5\n\6\2de\b\6\1\2ef\b\6\1\2fj\3\2\2\2gj\5\4\3\2hj\7")
+        buf.write("\4\2\2iH\3\2\2\2iM\3\2\2\2iW\3\2\2\2i_\3\2\2\2ig\3\2\2")
+        buf.write("\2ih\3\2\2\2j\13\3\2\2\2kl\5\16\b\2lm\7\t\2\2mn\5\f\7")
+        buf.write("\2nq\3\2\2\2oq\5\16\b\2pk\3\2\2\2po\3\2\2\2q\r\3\2\2\2")
+        buf.write("rs\5\20\t\2st\7\n\2\2tu\5\16\b\2ux\3\2\2\2vx\5\20\t\2")
+        buf.write("wr\3\2\2\2wv\3\2\2\2x\17\3\2\2\2y\u0080\5\24\13\2z\u0080")
         buf.write("\5\22\n\2{|\7\20\2\2|}\5\f\7\2}~\7\21\2\2~\u0080\3\2\2")
         buf.write("\2\177y\3\2\2\2\177z\3\2\2\2\177{\3\2\2\2\u0080\21\3\2")
         buf.write("\2\2\u0081\u0085\7\r\2\2\u0082\u0084\7\r\2\2\u0083\u0082")
@@ -117,15 +123,17 @@ class cgrammarParser ( Parser ):
     MAIN=16
     WS=17
 
-    def __init__(self, input:TokenStream):
-        super().__init__(input)
-        self.checkVersion("4.5.3")
+    def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
+        super().__init__(input, output)
+        self.checkVersion("4.9.1")
         self._interp = ParserATNSimulator(self, self.atn, self.decisionsToDFA, self.sharedContextCache)
         self._predicates = None
 
 
 
+
     class ProgramContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -187,7 +195,9 @@ class cgrammarParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class BlockContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -227,7 +237,7 @@ class cgrammarParser ( Parser ):
         self.enterRule(localctx, 2, self.RULE_block)
         try:
             self.state = 47
-            self._errHandler.sync(self);
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,0,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -278,7 +288,9 @@ class cgrammarParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class VarDeclContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -313,7 +325,7 @@ class cgrammarParser ( Parser ):
         self.enterRule(localctx, 4, self.RULE_varDecl)
         try:
             self.state = 62
-            self._errHandler.sync(self);
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,1,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -324,7 +336,7 @@ class cgrammarParser ( Parser ):
                 self.state = 51
                 self.match(cgrammarParser.T__1)
                 from cparse import addVariable
-                addVariable((None if localctx._identifier is None else self._input.getText((localctx._identifier.start,localctx._identifier.stop))))
+                addVariable((None if localctx._identifier is None else self._input.getText(localctx._identifier.start,localctx._identifier.stop)))
                 pass
 
             elif la_ == 2:
@@ -338,7 +350,7 @@ class cgrammarParser ( Parser ):
                 self.state = 58
                 self.varDecl()
                 from cparse import addVariable
-                addVariable((None if localctx._identifier is None else self._input.getText((localctx._identifier.start,localctx._identifier.stop))))
+                addVariable((None if localctx._identifier is None else self._input.getText(localctx._identifier.start,localctx._identifier.stop)))
                 pass
 
 
@@ -350,7 +362,9 @@ class cgrammarParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class MultiStatementContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -384,7 +398,7 @@ class cgrammarParser ( Parser ):
         self.enterRule(localctx, 6, self.RULE_multiStatement)
         try:
             self.state = 68
-            self._errHandler.sync(self);
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,2,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -409,7 +423,9 @@ class cgrammarParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class StatementContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -460,7 +476,7 @@ class cgrammarParser ( Parser ):
         self.enterRule(localctx, 8, self.RULE_statement)
         try:
             self.state = 103
-            self._errHandler.sync(self);
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,3,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -547,7 +563,9 @@ class cgrammarParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class ExprContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -581,7 +599,7 @@ class cgrammarParser ( Parser ):
         self.enterRule(localctx, 10, self.RULE_expr)
         try:
             self.state = 110
-            self._errHandler.sync(self);
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,4,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -608,7 +626,9 @@ class cgrammarParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class TermContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -642,7 +662,7 @@ class cgrammarParser ( Parser ):
         self.enterRule(localctx, 12, self.RULE_term)
         try:
             self.state = 117
-            self._errHandler.sync(self);
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,5,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -669,7 +689,9 @@ class cgrammarParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class FactorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -713,17 +735,18 @@ class cgrammarParser ( Parser ):
         self.enterRule(localctx, 14, self.RULE_factor)
         try:
             self.state = 125
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [cgrammarParser.Alpha]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 119
                 self.identifier()
-
+                pass
             elif token in [cgrammarParser.Digit]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 120
                 self.literal()
-
+                pass
             elif token in [cgrammarParser.OPENPAREN]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 121
@@ -732,7 +755,7 @@ class cgrammarParser ( Parser ):
                 self.expr()
                 self.state = 123
                 self.match(cgrammarParser.CLOSEPAREN)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -744,7 +767,9 @@ class cgrammarParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class LiteralContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -797,7 +822,9 @@ class cgrammarParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class IdentifierContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -830,7 +857,7 @@ class cgrammarParser ( Parser ):
         self.enterRule(localctx, 18, self.RULE_identifier)
         try:
             self.state = 137
-            self._errHandler.sync(self);
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,8,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -855,7 +882,9 @@ class cgrammarParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class RestOfIdentifierContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -889,7 +918,7 @@ class cgrammarParser ( Parser ):
         self.enterRule(localctx, 20, self.RULE_restOfIdentifier)
         try:
             self.state = 143
-            self._errHandler.sync(self);
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,9,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -914,7 +943,9 @@ class cgrammarParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class AlphaNumContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -949,25 +980,26 @@ class cgrammarParser ( Parser ):
         self.enterRule(localctx, 22, self.RULE_alphaNum)
         try:
             self.state = 151
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [cgrammarParser.Alpha]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 145
                 localctx._Alpha = self.match(cgrammarParser.Alpha)
                 localctx.value = (None if localctx._Alpha is None else localctx._Alpha.text)
-
+                pass
             elif token in [cgrammarParser.Digit]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 147
                 localctx._Digit = self.match(cgrammarParser.Digit)
                 localctx.value = (None if localctx._Digit is None else localctx._Digit.text)
-
+                pass
             elif token in [cgrammarParser.T__8]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 149
                 self.match(cgrammarParser.T__8)
                 localctx.value = '_'
-
+                pass
             else:
                 raise NoViableAltException(self)
 

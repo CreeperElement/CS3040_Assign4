@@ -1,8 +1,10 @@
 main() {
     int x;
     int y;
-    int z;
-    int abb;
+    int xyz;
+    int abc123;
+    int abc_123;
+
     x = 0;
     y = 10 + x;
     z = 8 * 5 + y;

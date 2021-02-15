@@ -1,4 +1,4 @@
-// Generated from cgrammar.g4 by ANTLR 4.5.3
+// Generated from cgrammar.g4 by ANTLR 4.9.1
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class cgrammarParser extends Parser {
-	static { RuntimeMetaData.checkVersion("4.5.3", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.9.1", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
@@ -23,19 +23,29 @@ public class cgrammarParser extends Parser {
 		RULE_program = 0, RULE_block = 1, RULE_varDecl = 2, RULE_multiStatement = 3, 
 		RULE_statement = 4, RULE_expr = 5, RULE_term = 6, RULE_factor = 7, RULE_literal = 8, 
 		RULE_identifier = 9, RULE_restOfIdentifier = 10, RULE_alphaNum = 11;
-	public static final String[] ruleNames = {
-		"program", "block", "varDecl", "multiStatement", "statement", "expr", 
-		"term", "factor", "literal", "identifier", "restOfIdentifier", "alphaNum"
-	};
+	private static String[] makeRuleNames() {
+		return new String[] {
+			"program", "block", "varDecl", "multiStatement", "statement", "expr", 
+			"term", "factor", "literal", "identifier", "restOfIdentifier", "alphaNum"
+		};
+	}
+	public static final String[] ruleNames = makeRuleNames();
 
-	private static final String[] _LITERAL_NAMES = {
-		null, "'int'", "';'", "'='", "'if'", "'else'", "'while'", "'+'", "'*'", 
-		"'_'", null, null, "'{'", "'}'", "'('", "')'", "'main'"
-	};
-	private static final String[] _SYMBOLIC_NAMES = {
-		null, null, null, null, null, null, null, null, null, null, "Alpha", "Digit", 
-		"OPENBRACK", "CLOSEBRACK", "OPENPAREN", "CLOSEPAREN", "MAIN", "WS"
-	};
+	private static String[] makeLiteralNames() {
+		return new String[] {
+			null, "'int'", "';'", "'='", "'if'", "'else'", "'while'", "'+'", "'*'", 
+			"'_'", null, null, "'{'", "'}'", "'('", "')'", "'main'"
+		};
+	}
+	private static final String[] _LITERAL_NAMES = makeLiteralNames();
+	private static String[] makeSymbolicNames() {
+		return new String[] {
+			null, null, null, null, null, null, null, null, null, null, "Alpha", 
+			"Digit", "OPENBRACK", "CLOSEBRACK", "OPENPAREN", "CLOSEPAREN", "MAIN", 
+			"WS"
+		};
+	}
+	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
 	/**
@@ -85,6 +95,7 @@ public class cgrammarParser extends Parser {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
+
 	public static class ProgramContext extends ParserRuleContext {
 		public TerminalNode MAIN() { return getToken(cgrammarParser.MAIN, 0); }
 		public TerminalNode OPENPAREN() { return getToken(cgrammarParser.OPENPAREN, 0); }
@@ -264,7 +275,7 @@ public class cgrammarParser extends Parser {
 				setState(51);
 				match(T__1);
 				from cparse import addVariable
-				addVariable(((VarDeclContext)_localctx).identifier.value)
+				addVariable((((VarDeclContext)_localctx).identifier!=null?_input.getText(((VarDeclContext)_localctx).identifier.start,((VarDeclContext)_localctx).identifier.stop):null))
 				}
 				break;
 			case 2:
@@ -279,7 +290,7 @@ public class cgrammarParser extends Parser {
 				setState(58);
 				varDecl();
 				from cparse import addVariable
-				addVariable(((VarDeclContext)_localctx).identifier.value)
+				addVariable((((VarDeclContext)_localctx).identifier!=null?_input.getText(((VarDeclContext)_localctx).identifier.start,((VarDeclContext)_localctx).identifier.stop):null))
 				}
 				break;
 			}
@@ -635,6 +646,7 @@ public class cgrammarParser extends Parser {
 		enterRule(_localctx, 14, RULE_factor);
 		try {
 			setState(125);
+			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case Alpha:
 				enterOuterAlt(_localctx, 1);
@@ -732,9 +744,6 @@ public class cgrammarParser extends Parser {
 	}
 
 	public static class IdentifierContext extends ParserRuleContext {
-		public string value;
-		public Token Alpha;
-		public RestOfIdentifierContext restOfIdentifier;
 		public TerminalNode Alpha() { return getToken(cgrammarParser.Alpha, 0); }
 		public RestOfIdentifierContext restOfIdentifier() {
 			return getRuleContext(RestOfIdentifierContext.class,0);
@@ -757,25 +766,23 @@ public class cgrammarParser extends Parser {
 		IdentifierContext _localctx = new IdentifierContext(_ctx, getState());
 		enterRule(_localctx, 18, RULE_identifier);
 		try {
-			setState(140);
+			setState(137);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,8,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(134);
-				((IdentifierContext)_localctx).Alpha = match(Alpha);
+				match(Alpha);
 				setState(135);
-				((IdentifierContext)_localctx).restOfIdentifier = restOfIdentifier();
-				_localctx.value = (((IdentifierContext)_localctx).Alpha!=null?((IdentifierContext)_localctx).Alpha.getText():null) + ((IdentifierContext)_localctx).restOfIdentifier.value
+				restOfIdentifier();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(138);
-				((IdentifierContext)_localctx).Alpha = match(Alpha);
-				_localctx.value = (((IdentifierContext)_localctx).Alpha!=null?((IdentifierContext)_localctx).Alpha.getText():null)
+				setState(136);
+				match(Alpha);
 				}
 				break;
 			}
@@ -792,9 +799,6 @@ public class cgrammarParser extends Parser {
 	}
 
 	public static class RestOfIdentifierContext extends ParserRuleContext {
-		public string value;
-		public AlphaNumContext alphaNum;
-		public RestOfIdentifierContext restOfIdentifier;
 		public AlphaNumContext alphaNum() {
 			return getRuleContext(AlphaNumContext.class,0);
 		}
@@ -819,25 +823,23 @@ public class cgrammarParser extends Parser {
 		RestOfIdentifierContext _localctx = new RestOfIdentifierContext(_ctx, getState());
 		enterRule(_localctx, 20, RULE_restOfIdentifier);
 		try {
-			setState(149);
+			setState(143);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,9,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(142);
-				((RestOfIdentifierContext)_localctx).alphaNum = alphaNum();
-				setState(143);
-				((RestOfIdentifierContext)_localctx).restOfIdentifier = restOfIdentifier();
-				_localctx.value = ((RestOfIdentifierContext)_localctx).alphaNum.value + _localctx.value
+				setState(139);
+				alphaNum();
+				setState(140);
+				restOfIdentifier();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(146);
-				((RestOfIdentifierContext)_localctx).alphaNum = alphaNum();
-				_localctx.value = ((RestOfIdentifierContext)_localctx).alphaNum.value
+				setState(142);
+				alphaNum();
 				}
 				break;
 			}
@@ -877,12 +879,13 @@ public class cgrammarParser extends Parser {
 		AlphaNumContext _localctx = new AlphaNumContext(_ctx, getState());
 		enterRule(_localctx, 22, RULE_alphaNum);
 		try {
-			setState(157);
+			setState(151);
+			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case Alpha:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(151);
+				setState(145);
 				((AlphaNumContext)_localctx).Alpha = match(Alpha);
 				_localctx.value = (((AlphaNumContext)_localctx).Alpha!=null?((AlphaNumContext)_localctx).Alpha.getText():null)
 				}
@@ -890,7 +893,7 @@ public class cgrammarParser extends Parser {
 			case Digit:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(153);
+				setState(147);
 				((AlphaNumContext)_localctx).Digit = match(Digit);
 				_localctx.value = (((AlphaNumContext)_localctx).Digit!=null?((AlphaNumContext)_localctx).Digit.getText():null)
 				}
@@ -898,7 +901,7 @@ public class cgrammarParser extends Parser {
 			case T__8:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(155);
+				setState(149);
 				match(T__8);
 				_localctx.value = '_'
 				}
@@ -919,7 +922,7 @@ public class cgrammarParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\23\u00a2\4\2\t\2"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\23\u009c\4\2\t\2"+
 		"\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13"+
 		"\t\13\4\f\t\f\4\r\t\r\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\3\3\3\3\3\3\3"+
 		"\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\5\3\62\n\3\3\4\3\4\3\4\3"+
@@ -928,41 +931,39 @@ public class cgrammarParser extends Parser {
 		"\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\5\6j"+
 		"\n\6\3\7\3\7\3\7\3\7\3\7\5\7q\n\7\3\b\3\b\3\b\3\b\3\b\5\bx\n\b\3\t\3\t"+
 		"\3\t\3\t\3\t\3\t\5\t\u0080\n\t\3\n\3\n\7\n\u0084\n\n\f\n\16\n\u0087\13"+
-		"\n\3\13\3\13\3\13\3\13\3\13\3\13\5\13\u008f\n\13\3\f\3\f\3\f\3\f\3\f\3"+
-		"\f\3\f\5\f\u0098\n\f\3\r\3\r\3\r\3\r\3\r\3\r\5\r\u00a0\n\r\3\r\2\2\16"+
-		"\2\4\6\b\n\f\16\20\22\24\26\30\2\2\u00a8\2\32\3\2\2\2\4\61\3\2\2\2\6@"+
-		"\3\2\2\2\bF\3\2\2\2\ni\3\2\2\2\fp\3\2\2\2\16w\3\2\2\2\20\177\3\2\2\2\22"+
-		"\u0081\3\2\2\2\24\u008e\3\2\2\2\26\u0097\3\2\2\2\30\u009f\3\2\2\2\32\33"+
-		"\7\22\2\2\33\34\7\20\2\2\34\35\7\21\2\2\35\36\5\4\3\2\36\37\7\2\2\3\37"+
-		" \b\2\1\2 !\b\2\1\2!\3\3\2\2\2\"#\7\16\2\2#$\5\6\4\2$%\5\b\5\2%&\7\17"+
-		"\2\2&\62\3\2\2\2\'(\7\16\2\2()\5\6\4\2)*\7\17\2\2*\62\3\2\2\2+,\7\16\2"+
-		"\2,-\5\b\5\2-.\7\17\2\2.\62\3\2\2\2/\60\7\16\2\2\60\62\7\17\2\2\61\"\3"+
-		"\2\2\2\61\'\3\2\2\2\61+\3\2\2\2\61/\3\2\2\2\62\5\3\2\2\2\63\64\7\3\2\2"+
-		"\64\65\5\24\13\2\65\66\7\4\2\2\66\67\b\4\1\2\678\b\4\1\28A\3\2\2\29:\7"+
-		"\3\2\2:;\5\24\13\2;<\7\4\2\2<=\5\6\4\2=>\b\4\1\2>?\b\4\1\2?A\3\2\2\2@"+
-		"\63\3\2\2\2@9\3\2\2\2A\7\3\2\2\2BC\5\n\6\2CD\5\b\5\2DG\3\2\2\2EG\5\n\6"+
-		"\2FB\3\2\2\2FE\3\2\2\2G\t\3\2\2\2HI\5\24\13\2IJ\7\5\2\2JK\5\f\7\2KL\7"+
-		"\4\2\2Lj\3\2\2\2MN\7\6\2\2NO\7\20\2\2OP\5\f\7\2PQ\7\21\2\2QR\5\n\6\2R"+
-		"S\7\7\2\2ST\5\n\6\2TU\b\6\1\2UV\b\6\1\2Vj\3\2\2\2WX\7\6\2\2XY\7\20\2\2"+
-		"YZ\5\f\7\2Z[\7\21\2\2[\\\5\n\6\2\\]\b\6\1\2]^\b\6\1\2^j\3\2\2\2_`\7\b"+
-		"\2\2`a\7\20\2\2ab\5\f\7\2bc\7\21\2\2cd\5\n\6\2de\b\6\1\2ef\b\6\1\2fj\3"+
-		"\2\2\2gj\5\4\3\2hj\7\4\2\2iH\3\2\2\2iM\3\2\2\2iW\3\2\2\2i_\3\2\2\2ig\3"+
-		"\2\2\2ih\3\2\2\2j\13\3\2\2\2kl\5\16\b\2lm\7\t\2\2mn\5\f\7\2nq\3\2\2\2"+
-		"oq\5\16\b\2pk\3\2\2\2po\3\2\2\2q\r\3\2\2\2rs\5\20\t\2st\7\n\2\2tu\5\16"+
-		"\b\2ux\3\2\2\2vx\5\20\t\2wr\3\2\2\2wv\3\2\2\2x\17\3\2\2\2y\u0080\5\24"+
-		"\13\2z\u0080\5\22\n\2{|\7\20\2\2|}\5\f\7\2}~\7\21\2\2~\u0080\3\2\2\2\177"+
-		"y\3\2\2\2\177z\3\2\2\2\177{\3\2\2\2\u0080\21\3\2\2\2\u0081\u0085\7\r\2"+
-		"\2\u0082\u0084\7\r\2\2\u0083\u0082\3\2\2\2\u0084\u0087\3\2\2\2\u0085\u0083"+
-		"\3\2\2\2\u0085\u0086\3\2\2\2\u0086\23\3\2\2\2\u0087\u0085\3\2\2\2\u0088"+
-		"\u0089\7\f\2\2\u0089\u008a\5\26\f\2\u008a\u008b\b\13\1\2\u008b\u008f\3"+
-		"\2\2\2\u008c\u008d\7\f\2\2\u008d\u008f\b\13\1\2\u008e\u0088\3\2\2\2\u008e"+
-		"\u008c\3\2\2\2\u008f\25\3\2\2\2\u0090\u0091\5\30\r\2\u0091\u0092\5\26"+
-		"\f\2\u0092\u0093\b\f\1\2\u0093\u0098\3\2\2\2\u0094\u0095\5\30\r\2\u0095"+
-		"\u0096\b\f\1\2\u0096\u0098\3\2\2\2\u0097\u0090\3\2\2\2\u0097\u0094\3\2"+
-		"\2\2\u0098\27\3\2\2\2\u0099\u009a\7\f\2\2\u009a\u00a0\b\r\1\2\u009b\u009c"+
-		"\7\r\2\2\u009c\u00a0\b\r\1\2\u009d\u009e\7\13\2\2\u009e\u00a0\b\r\1\2"+
-		"\u009f\u0099\3\2\2\2\u009f\u009b\3\2\2\2\u009f\u009d\3\2\2\2\u00a0\31"+
-		"\3\2\2\2\r\61@Fipw\177\u0085\u008e\u0097\u009f";
+		"\n\3\13\3\13\3\13\5\13\u008c\n\13\3\f\3\f\3\f\3\f\5\f\u0092\n\f\3\r\3"+
+		"\r\3\r\3\r\3\r\3\r\5\r\u009a\n\r\3\r\2\2\16\2\4\6\b\n\f\16\20\22\24\26"+
+		"\30\2\2\2\u00a2\2\32\3\2\2\2\4\61\3\2\2\2\6@\3\2\2\2\bF\3\2\2\2\ni\3\2"+
+		"\2\2\fp\3\2\2\2\16w\3\2\2\2\20\177\3\2\2\2\22\u0081\3\2\2\2\24\u008b\3"+
+		"\2\2\2\26\u0091\3\2\2\2\30\u0099\3\2\2\2\32\33\7\22\2\2\33\34\7\20\2\2"+
+		"\34\35\7\21\2\2\35\36\5\4\3\2\36\37\7\2\2\3\37 \b\2\1\2 !\b\2\1\2!\3\3"+
+		"\2\2\2\"#\7\16\2\2#$\5\6\4\2$%\5\b\5\2%&\7\17\2\2&\62\3\2\2\2\'(\7\16"+
+		"\2\2()\5\6\4\2)*\7\17\2\2*\62\3\2\2\2+,\7\16\2\2,-\5\b\5\2-.\7\17\2\2"+
+		".\62\3\2\2\2/\60\7\16\2\2\60\62\7\17\2\2\61\"\3\2\2\2\61\'\3\2\2\2\61"+
+		"+\3\2\2\2\61/\3\2\2\2\62\5\3\2\2\2\63\64\7\3\2\2\64\65\5\24\13\2\65\66"+
+		"\7\4\2\2\66\67\b\4\1\2\678\b\4\1\28A\3\2\2\29:\7\3\2\2:;\5\24\13\2;<\7"+
+		"\4\2\2<=\5\6\4\2=>\b\4\1\2>?\b\4\1\2?A\3\2\2\2@\63\3\2\2\2@9\3\2\2\2A"+
+		"\7\3\2\2\2BC\5\n\6\2CD\5\b\5\2DG\3\2\2\2EG\5\n\6\2FB\3\2\2\2FE\3\2\2\2"+
+		"G\t\3\2\2\2HI\5\24\13\2IJ\7\5\2\2JK\5\f\7\2KL\7\4\2\2Lj\3\2\2\2MN\7\6"+
+		"\2\2NO\7\20\2\2OP\5\f\7\2PQ\7\21\2\2QR\5\n\6\2RS\7\7\2\2ST\5\n\6\2TU\b"+
+		"\6\1\2UV\b\6\1\2Vj\3\2\2\2WX\7\6\2\2XY\7\20\2\2YZ\5\f\7\2Z[\7\21\2\2["+
+		"\\\5\n\6\2\\]\b\6\1\2]^\b\6\1\2^j\3\2\2\2_`\7\b\2\2`a\7\20\2\2ab\5\f\7"+
+		"\2bc\7\21\2\2cd\5\n\6\2de\b\6\1\2ef\b\6\1\2fj\3\2\2\2gj\5\4\3\2hj\7\4"+
+		"\2\2iH\3\2\2\2iM\3\2\2\2iW\3\2\2\2i_\3\2\2\2ig\3\2\2\2ih\3\2\2\2j\13\3"+
+		"\2\2\2kl\5\16\b\2lm\7\t\2\2mn\5\f\7\2nq\3\2\2\2oq\5\16\b\2pk\3\2\2\2p"+
+		"o\3\2\2\2q\r\3\2\2\2rs\5\20\t\2st\7\n\2\2tu\5\16\b\2ux\3\2\2\2vx\5\20"+
+		"\t\2wr\3\2\2\2wv\3\2\2\2x\17\3\2\2\2y\u0080\5\24\13\2z\u0080\5\22\n\2"+
+		"{|\7\20\2\2|}\5\f\7\2}~\7\21\2\2~\u0080\3\2\2\2\177y\3\2\2\2\177z\3\2"+
+		"\2\2\177{\3\2\2\2\u0080\21\3\2\2\2\u0081\u0085\7\r\2\2\u0082\u0084\7\r"+
+		"\2\2\u0083\u0082\3\2\2\2\u0084\u0087\3\2\2\2\u0085\u0083\3\2\2\2\u0085"+
+		"\u0086\3\2\2\2\u0086\23\3\2\2\2\u0087\u0085\3\2\2\2\u0088\u0089\7\f\2"+
+		"\2\u0089\u008c\5\26\f\2\u008a\u008c\7\f\2\2\u008b\u0088\3\2\2\2\u008b"+
+		"\u008a\3\2\2\2\u008c\25\3\2\2\2\u008d\u008e\5\30\r\2\u008e\u008f\5\26"+
+		"\f\2\u008f\u0092\3\2\2\2\u0090\u0092\5\30\r\2\u0091\u008d\3\2\2\2\u0091"+
+		"\u0090\3\2\2\2\u0092\27\3\2\2\2\u0093\u0094\7\f\2\2\u0094\u009a\b\r\1"+
+		"\2\u0095\u0096\7\r\2\2\u0096\u009a\b\r\1\2\u0097\u0098\7\13\2\2\u0098"+
+		"\u009a\b\r\1\2\u0099\u0093\3\2\2\2\u0099\u0095\3\2\2\2\u0099\u0097\3\2"+
+		"\2\2\u009a\31\3\2\2\2\r\61@Fipw\177\u0085\u008b\u0091\u0099";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {
